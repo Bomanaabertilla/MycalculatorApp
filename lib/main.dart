@@ -60,7 +60,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         onPressed: () => handleButtonPress(text),
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(20),
           shape: CircleBorder(),
         ),
         child: Text(
@@ -80,7 +80,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           // Display Input
           Container(
             alignment: Alignment.bottomRight,
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(20),
             child: Text(
               input,
               style: const TextStyle(fontSize: 32, color: Colors.black87),
@@ -89,7 +89,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           // Display Output
           Container(
             alignment: Alignment.bottomRight,
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(20),
             child: Text(
               output,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
@@ -99,10 +99,11 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
           Expanded(
             child: Column(
               children: [
-                Row(children: [buildButton('7'), buildButton('8'), buildButton('9'), buildButton('/', color: Colors.purpleAccent)]),
-                Row(children: [buildButton('4'), buildButton('5'), buildButton('6'), buildButton('*', color: Colors.purpleAccent)]),
-                Row(children: [buildButton('1'), buildButton('2'), buildButton('3'), buildButton('-', color: Colors.purpleAccent)]),
-                Row(children: [buildButton('C', color: Colors.red), buildButton('0'), buildButton('=', color: Colors.green), buildButton('+', color: Colors.purpleAccent)]),
+                Row(children: [buildButton('C', color: Colors.red), buildButton('()'), buildButton('%'), buildButton('/', color: Colors.purpleAccent)]),
+                Row(children: [buildButton('7'), buildButton('8'), buildButton('9'), buildButton('x', color: Colors.purpleAccent)]),
+                Row(children: [buildButton('4'), buildButton('5'), buildButton('6'), buildButton('_', color: Colors.purpleAccent)]),
+                Row(children: [buildButton('1'), buildButton('2'), buildButton('3'), buildButton('+', color: Colors.purpleAccent)]),
+                Row(children: [buildButton('+/-'), buildButton('0'), buildButton('.'), buildButton('=', color: Colors.green) ]),
               ],
             ),
           ),
