@@ -54,7 +54,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     });
   }
 
-  Widget buildButton(String text, {Color color = Colors.grey}) {
+  Widget buildButton(String text, {Color color = Colors.transparent}) {
     return Expanded(
       child: ElevatedButton(
         onPressed: () => handleButtonPress(text),
